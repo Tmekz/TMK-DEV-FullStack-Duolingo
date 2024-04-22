@@ -1,7 +1,12 @@
+import { Button } from "@/components/ui/button";
+
 export default function Home() {
   return (
-    <div>
-      <p className="text-9xl text-green-500 font-bold">Hello duolingo</p>
+    <div className="">
+      <p className=" mb-4 text-5xl text-green-500 font-bold">Hello duolingo</p>
+      <Button size={"lg"} variant={"destructive"}>
+        Click Me
+      </Button>
     </div>
   );
 }
