@@ -5,7 +5,15 @@
 //   );
 // };
 
-import { ClerkLoading } from "@clerk/nextjs";
+import { Button } from "@/components/ui/button";
+import {
+  ClerkLoaded,
+  ClerkLoading,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 import { Loader } from "lucide-react";
 import Image from "next/image";
 
@@ -25,9 +33,30 @@ const Header = () => {
             Duolingo
           </h1>
         </div>
+        {/* to show a loader while clerk cheks if signed in or no */}
         <ClerkLoading>
           <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
         </ClerkLoading>
+
+        {/* clerk icon after loading and after being signed in*/}
+        {/* interface quand user connecté */}
+        <ClerkLoaded>
+          {/* When im logged and i want to show the clerk icon to manage settings or sign out*/}
+          <SignedIn>
+            {/* what is happening when i sign out */}
+            <UserButton afterSignOutUrl="/buttons" />
+          </SignedIn>
+
+          {/* Clerk icon when not signed in */}
+          {/* interface pas encore connectée */}
+          <SignedOut>
+            <SignInButton mode="modal" fallbackRedirectUrl={"/"}>
+              <Button size={"lg"} variant={"ghost"}>
+                Login
+              </Button>
+            </SignInButton>
+          </SignedOut>
+        </ClerkLoaded>
       </div>
     </div>
   );
