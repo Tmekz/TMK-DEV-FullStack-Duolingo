@@ -1,6 +1,8 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
-const isProtectedRoute = createRouteMatcher(["/buttons(.*)"]);
+const isProtectedRoute = createRouteMatcher([
+    // "/buttons(.*)"
+]);
 
 export default clerkMiddleware(
   (auth, req) => {
