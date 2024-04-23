@@ -44,7 +44,7 @@ const Header = () => {
           {/* When im logged and i want to show the clerk icon to manage settings or sign out*/}
           <SignedIn>
             {/* what is happening when i sign out */}
-            <UserButton afterSignOutUrl="/buttons" />
+            <UserButton afterSignOutUrl="/" />
           </SignedIn>
 
           {/* Clerk icon when not signed in */}
