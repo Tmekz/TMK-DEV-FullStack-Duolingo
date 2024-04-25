@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import {
   ClerkLoaded,
   ClerkLoading,
+  SignInButton,
   SignUpButton,
   SignedIn,
   SignedOut,
+  UserButton,
 } from "@clerk/nextjs";
 import { Loader } from "lucide-react";
 import Image from "next/image";
@@ -23,15 +25,25 @@ const Home = () => {
           <ClerkLoading>
             <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
           </ClerkLoading>
+
           <ClerkLoaded>
             {/* pas encore connecté */}
             <SignedOut>
               {/* pour s'enregistrer */}
-              <SignUpButton mode="modal" afterSignUpUrl="/onboarding">
+              <SignUpButton mode="modal" fallbackRedirectUrl="/">
                 <Button size={"lg"} variant={"secondary"} className="w-full">
                   Get Started
                 </Button>
               </SignUpButton>
+              <SignInButton mode="modal" fallbackRedirectUrl="/">
+                <Button
+                  size={"lg"}
+                  variant={"primaryOutline"}
+                  className="w-full"
+                >
+                  I already have an account
+                </Button>
+              </SignInButton>
             </SignedOut>
             {/* connecté */}
             <SignedIn></SignedIn>
