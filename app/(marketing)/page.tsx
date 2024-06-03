@@ -26,7 +26,7 @@ const Home = () => {
         "
         >
           <ClerkLoading>
-            <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
+            <Loader className="h-10 w-10 text-muted-foreground animate-spin" />
           </ClerkLoading>
 
           <ClerkLoaded>
@@ -48,6 +48,7 @@ const Home = () => {
                 </Button>
               </SignInButton>
             </SignedOut>
+            
             {/* connecté */}
             <SignedIn>
               <Button size={"lg"} variant={"secondary"} className="w-full">
