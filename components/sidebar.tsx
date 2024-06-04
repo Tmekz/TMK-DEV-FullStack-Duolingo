@@ -2,6 +2,13 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { SidebarItem } from "./sidebar-item";
+import {
+  ClerkLoaded,
+  ClerkLoading,
+  SignOutButton,
+  UserButton,
+} from "@clerk/nextjs";
+import { Loader } from "lucide-react";
 
 type Props = {
   className?: String;
@@ -23,13 +30,30 @@ const Sidebar = ({ className }: Props) => {
             width={40}
             alt="Duolingo Mascot"
           />
-          <h1 className="text-2xl font-extrabold text-green-600 tracking-wide">
-            Duolingo
-          </h1>
+          <Link href={"/"}>
+            <h1 className="text-2xl font-extrabold text-green-600 tracking-wide">
+              Duolingo
+            </h1>
+          </Link>
         </div>
       </Link>
       <div className="flex flex-col gap-y-2 flex-1">
         <SidebarItem label="Learn" href="/learn" iconSrc="/learn.svg" />
+        <SidebarItem
+          label="Leaderboard"
+          href="/leaderboard"
+          iconSrc="/leaderboard.svg"
+        />
+        <SidebarItem label="Quests" href="/quests" iconSrc="/quests.svg" />
+        <SidebarItem label="SHOP" href="/shop" iconSrc="/shop.svg" />
+      </div>
+      <div className="p-4">
+        <ClerkLoading>
+          <Loader className="h-10 w-10 text-muted-foreground animate-spin" />
+        </ClerkLoading>
+        <ClerkLoaded>
+          <UserButton />
+        </ClerkLoaded>
       </div>
     </div>
   );
