@@ -52,7 +52,7 @@ const Sidebar = ({ className }: Props) => {
           <Loader className="h-10 w-10 text-muted-foreground animate-spin" />
         </ClerkLoading>
         <ClerkLoaded>
-          <UserButton />
+          <UserButton/>
         </ClerkLoaded>
       </div>
     </div>
