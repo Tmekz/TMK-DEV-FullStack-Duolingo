@@ -11,7 +11,7 @@ const Footer = () => {
             alt="French flag"
             height={32}
             width={40}
-            className="mr-4 rounded-md"
+            className="mr-4 rounded-md w-auto h-auto"
           />
           France
         </Button>
@@ -21,7 +21,7 @@ const Footer = () => {
             alt="Spanish flag"
             height={32}
             width={40}
-            className="mr-4 rounded-md"
+            className="mr-4 rounded-md w-auto h-auto"
           />
           Spanish
         </Button>
@@ -31,7 +31,7 @@ const Footer = () => {
             alt="Italian flag"
             height={32}
             width={40}
-            className="mr-4 rounded-md"
+            className="mr-4 rounded-md w-auto h-auto"
           />
           Italian
         </Button>
@@ -41,7 +41,7 @@ const Footer = () => {
             alt="Japan flag"
             height={32}
             width={40}
-            className="mr-4 rounded-md"
+            className="mr-4 rounded-md w-auto h-auto"
           />
           Japan
         </Button>
@@ -51,7 +51,7 @@ const Footer = () => {
             alt="American flag"
             height={32}
             width={40}
-            className="mr-4 rounded-md"
+            className="mr-4 rounded-md w-auto h-auto"
           />
           American
         </Button>
