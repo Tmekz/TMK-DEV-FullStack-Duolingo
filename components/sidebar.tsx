@@ -22,7 +22,7 @@ const Sidebar = ({ className }: Props) => {
         className
       )}
     >
-      <Link href={"/learn"}>
+      <Link href={"/"}>
         <div className="pt-8 pl-4 pb-7 flex items-center gap-x-3">
           <Image
             src="/mascot.svg"
@@ -30,11 +30,10 @@ const Sidebar = ({ className }: Props) => {
             width={40}
             alt="Duolingo Mascot"
           />
-          <Link href={"/"}>
-            <h1 className="text-2xl font-extrabold text-green-600 tracking-wide">
-              Duolingo
-            </h1>
-          </Link>
+
+          <h1 className="text-2xl font-extrabold text-green-600 tracking-wide">
+            Duolingo
+          </h1>
         </div>
       </Link>
       <div className="flex flex-col gap-y-2 flex-1">
@@ -52,7 +51,7 @@ const Sidebar = ({ className }: Props) => {
           <Loader className="h-10 w-10 text-muted-foreground animate-spin" />
         </ClerkLoading>
         <ClerkLoaded>
-          <UserButton/>
+          <UserButton />
         </ClerkLoaded>
       </div>
     </div>
